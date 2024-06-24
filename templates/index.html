@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with PDFs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-lg bg-dark text-light">
+            <div class="card-body">
+                <h5 class="card-title">Upload PDF Files</h5>
+                <form action="/" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="pdfs">Choose PDF files</label>
+                        <input type="file" class="form-control-file" id="pdfs" name="pdfs" multiple>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Process</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
